@@ -67,3 +67,67 @@ x[n+1] = f(x[n]) - Equações de Diferenças
 * Pontos discretos e degraus
 
 ### Exemplos
+
+## Importância na Computação
+### Compreensão
+* Sistemas com milhares variáveis
+* Comportamentos emergentes
+* Padrões não óbvios
+
+### Predição
+* Testa cenários futuros
+* Avalia impacto de mudanças
+* Decisões baseadas em dados
+
+### Economia
+* Redução de custos de prototipagem
+* Menor tempo de desenvolvimento
+* Evita experimentos perigosos
+
+### Formação
+* Raciocínio algorítmico
+* Abstração de problemas
+* Preparação para IA e Data Science
+
+## Aplicações Práticas
+### Indústria
+* Otimização de linhas de produção
+* Simulação de fluxos industriais
+* Análise de confiabilidade
+* Design de produtos virtuais
+
+### Jogos
+* Física de jogos realística
+* Simução de multidões
+* Efeitos visuais avançados
+* Inteligência artificial
+
+### Medicina
+* Propagação de epidemias
+* Descoberta de medicamentos
+* Análise de fluxo sanguíneo
+* Dinâmica molecular
+
+### Finanças
+* Modelagem de risco financeiro
+* Simulação Monte Carlo (inserir valores aleatórios)
+* Análise de mercados
+* Otimização de portfólios
+
+## Ferramentas e Tecnologias
+
+### Iniciais
+* Python
+ * NumPy, SciPy, Matplotlib
+* MATLAB
+ * Interface visual amigável
+* NetLogo
+ * Modelagem baseada em agentes
+
+### Específicas
+* R
+ * Estatísticas e análise de dados
+* Julia
+ * Alto desempenho científico
+* AnyLogic
+ * Sistemas complexos
