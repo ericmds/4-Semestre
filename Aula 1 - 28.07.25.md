@@ -118,16 +118,16 @@ x[n+1] = f(x[n]) - Equações de Diferenças
 
 ### Iniciais
 * Python
- * NumPy, SciPy, Matplotlib
+  * NumPy, SciPy, Matplotlib
 * MATLAB
- * Interface visual amigável
+  * Interface visual amigável
 * NetLogo
- * Modelagem baseada em agentes
+  * Modelagem baseada em agentes
 
 ### Específicas
 * R
- * Estatísticas e análise de dados
+  * Estatísticas e análise de dados
 * Julia
- * Alto desempenho científico
+  * Alto desempenho científico
 * AnyLogic
- * Sistemas complexos
+  * Sistemas complexos
