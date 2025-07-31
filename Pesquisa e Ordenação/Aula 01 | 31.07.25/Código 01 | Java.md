@@ -1,5 +1,6 @@
 # Código em java
-* Popular uma lista com números aleatórios
+* Popular uma lista com números aleatórios, de tamanho flexível e números vindos de arquivos ou sorteados
+* Toda programação tem que ser orientada a objeto
 
 ## Classe Util
 ```java
