@@ -14,3 +14,8 @@ Não representa o número total de tabelas
   * Obrigatoriamente: Único e não nulo
   * Natural: Todo mundo já possui (ex: CPF)
   * Artificiais: Valor que eu gerei (ex: Id)
+
+## D.E.R. Lógico
+Se aproxima do modelo físico
+* Restrições de domínio (tipos: int, varchar, float, etc)
+* Chave estrangeira - o n sempre puxa a chave
