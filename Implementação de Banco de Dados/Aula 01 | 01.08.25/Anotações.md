@@ -14,11 +14,18 @@ Não representa o número total de tabelas
   * Obrigatoriamente: Único e não nulo
   * Natural: Todo mundo já possui (ex: CPF)
   * Artificiais: Valor que eu gerei (ex: Id)
+<img width="943" height="462" alt="{62B3AE9C-EAEE-40A7-B1CE-E40E82A4C3FE}" src="https://github.com/user-attachments/assets/db3a8a9e-b0bc-437a-a646-f799d6c8ea59" />
+
 
 ## D.E.R. Lógico
 Se aproxima do modelo físico
 * Restrições de domínio (tipos: int, varchar, float, etc)
 * Chave estrangeira - o n sempre puxa a chave
+<img width="899" height="530" alt="{4F202F5F-78FA-46E4-AA9B-9D37D32CEDE2}" src="https://github.com/user-attachments/assets/6d2ca2ee-062d-4ab0-a206-2de8e856fbdf" />
+
+
+## D.E.R. Físico
+<img width="629" height="541" alt="{F06255CE-55C6-4936-9F54-740DD55EDDB7}" src="https://github.com/user-attachments/assets/cb18013e-1676-4cce-940a-5247eef871a3" />
 
 ```sql
 CREATE DATABASE AULA0;
