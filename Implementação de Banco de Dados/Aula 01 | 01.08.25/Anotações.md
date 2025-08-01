@@ -22,10 +22,9 @@ Se aproxima do modelo físico
 * Restrições de domínio (tipos: int, varchar, float, etc)
 * Chave estrangeira - o n sempre puxa a chave
 <img width="899" height="530" alt="{4F202F5F-78FA-46E4-AA9B-9D37D32CEDE2}" src="https://github.com/user-attachments/assets/6d2ca2ee-062d-4ab0-a206-2de8e856fbdf" />
-
+<img width="629" height="541" alt="{F06255CE-55C6-4936-9F54-740DD55EDDB7}" src="https://github.com/user-attachments/assets/cb18013e-1676-4cce-940a-5247eef871a3" />
 
 ## D.E.R. Físico
-<img width="629" height="541" alt="{F06255CE-55C6-4936-9F54-740DD55EDDB7}" src="https://github.com/user-attachments/assets/cb18013e-1676-4cce-940a-5247eef871a3" />
 
 ```sql
 CREATE DATABASE AULA0;
