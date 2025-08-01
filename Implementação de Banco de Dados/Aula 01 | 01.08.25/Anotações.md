@@ -5,6 +5,7 @@
 A ideia inicial do banco de dados é eliminar redundancia, menor quantidade de tababela, chaves primarias e valores nulos possíveis
 
 ## D.E.R. Conceitual
+Não representa o número total de tabelas
 * Entidade
 * Reacionamento
 * Cardinalidade
