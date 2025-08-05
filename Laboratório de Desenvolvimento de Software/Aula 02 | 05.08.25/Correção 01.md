@@ -15,7 +15,7 @@ public class FormaGeometrica {
 ```
 
 ## Classe Triangulo
-```
+```java
 package Correcao01;
 
 public class Triangulo extends FormaGeometrica {
