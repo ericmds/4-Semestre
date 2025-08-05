@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Exercico02;
+
+/**
+ *
+ * @author laboratorio
+ */
+public class Calculos implements ICalculadora {
+
+    @Override
+    public double somar(double n1, double n2) {
+        return n1 + n2;
+    }
+
+    @Override
+    public double subtrair(double n1, double n2) {
+        return n1 - n2;
+    }
+
+    @Override
+    public double multiplicar(double n1, double n2) {
+        return n1 * n2;
+    }
+
+    @Override
+    public double dividir(double n1, double n2) {
+        if (n2 == 0) {
+            System.out.println("Impossível dividir por zero");
+            return 0; // ou lançar exceção, dependendo do que você deseja
+        } else {
+            return n1 / n2;
+        }
+    }
+
+    @Override
+    public double raizquadrada(double n1) {
+        return Math.sqrt(n1);
+    }
+
+    @Override
+    public double elevarPorencia(double n1, double n2) {
+        return Math.pow(n1, n2);
+    }
+
+    @Override
+    public double logaritmo10(double n1) {
+        return Math.log10(n1); // Corrigido para logaritmo de base 10
+    }
+}
