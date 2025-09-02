@@ -25,17 +25,17 @@ SHOW TABLES;
 DESC pessoa;
 
 INSERT INTO pessoa(nome, sexo, idioma)
-  -> VALUES("Eric", "M", "Português");
+  VALUES("Eric", "M", "Português");
 
 SELECT * FROM pessoa;
 
 INSERT INTO pessoa(nome, sexo, idioma)
-  -> VALUES
-  -> ("Vanessa", "F", "Inglês"),
-  -> ("Luiza", "F", "Espanhol"),
-  -> ("Frazzon", "M", "Francês"),
-  -> ("João", "M", "Alemão"),
-  -> ("Bernardo", "M", "Holandês");
+  VALUES
+  ("Vanessa", "F", "Inglês"),
+  ("Luiza", "F", "Espanhol"),
+  ("Frazzon", "M", "Francês"),
+  ("João", "M", "Alemão"),
+  ("Bernardo", "M", "Holandês");
 ```
 
 ## BANCO DE DADOS
