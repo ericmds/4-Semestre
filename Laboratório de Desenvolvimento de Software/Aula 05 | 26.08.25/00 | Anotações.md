@@ -14,11 +14,11 @@ CREATE DATABASE BDAula01;
 USE BDAula01;
 
 CREATE TABLE pessoa(
-  -> id int AUTO_INCREMENT PRIMARY KEY,
-  -> nome varchar(50) NOT NULL,
-  -> sexo varchar(1) NOT NULL,
-  -> idioma varchar(10) NOT NULL
-  -> );
+  id int AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(50) NOT NULL,
+  sexo varchar(1) NOT NULL,
+  idioma varchar(10) NOT NULL
+  );
 
 SHOW TABLES;
 
