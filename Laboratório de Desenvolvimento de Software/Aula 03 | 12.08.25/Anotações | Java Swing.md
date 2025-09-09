@@ -76,3 +76,15 @@ Passo a passo para utilizar Java Swing no NetBeans
 * Selecione “Java with Ant” e “Java Application”
 * Defina o nome para o projeto
 * Desmarque a opção “Create Main Class”
+* Clique com botão direito no nome do pacote
+* “New” → “JFrame Form
+
+<div align="center">
+  
+<img width="723" height="498" alt="Captura de tela 2025-09-09 002843" src="https://github.com/user-attachments/assets/21094bae-4a3c-4c42-bd12-c4a433ad99bf" />
+<img width="740" height="501" alt="Captura de tela 2025-09-09 002907" src="https://github.com/user-attachments/assets/a5811069-0635-4168-9e81-6d922ea490a3" />
+<img width="573" height="668" alt="Captura de tela 2025-09-09 003005" src="https://github.com/user-attachments/assets/42f20981-653d-4aa9-9cf1-af159b4121b8" />
+<img width="746" height="504" alt="Captura de tela 2025-09-09 003030" src="https://github.com/user-attachments/assets/1331a49a-4212-46a0-ae08-e84cb2925176" />
+
+</div>
+
