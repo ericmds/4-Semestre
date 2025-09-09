@@ -2,7 +2,7 @@
 
 ## Código 1
 ### Pessoa
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -43,7 +43,7 @@ public class Pessoa {
 
 ```
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -68,7 +68,7 @@ public class Principal {
 ```
 ## Código 2
 ### Aluno
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -115,7 +115,7 @@ public class Aluno {
 
 ```
 ### Pessoa
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -143,7 +143,7 @@ public class Pessoa {
 
 ## Código 3
 ### Carro
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -172,7 +172,7 @@ public class Carro {
 
 ```
 ### Onibus
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -199,7 +199,7 @@ public class Onibus extends Carro {
 
 ```
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -230,7 +230,7 @@ public class Principal {
 
 ## Código 4
 ### Animal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -274,7 +274,7 @@ public class Animal {
 
 ```
 ### Cachorro
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -295,7 +295,7 @@ public class Cachorro extends Animal {
 
 ```
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -315,7 +315,7 @@ public class Principal {
 
 ## Código 5
 ### Cliente
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -339,7 +339,7 @@ public class Cliente extends Pessoa {
 
 ```
 ### Pessoa
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -360,7 +360,7 @@ public class Pessoa {
 
 ```
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -390,7 +390,7 @@ public class Principal {
 
 ## Exercício 1
 ### FormaGeometrica
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -414,7 +414,7 @@ public class FormaGeometrica { // Quadrado
 ```
 
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -439,7 +439,7 @@ public class Principal {
 ```
 
 ### Triangulo
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -469,7 +469,7 @@ public class Triangulo extends FormaGeometrica {
 
 ## Exercício 2
 ### Casa
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -495,7 +495,7 @@ public class Casa {
 ```
 
 ### Principal
-```
+```java
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
