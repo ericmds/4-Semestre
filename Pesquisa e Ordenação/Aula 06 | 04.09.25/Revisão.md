@@ -46,31 +46,43 @@ def esta_ordenado(lista):
 0   1   2   3   4   5   6   7   8
 30  90  10  20  80  10  20  40  10 
 ```
-### Bolha
+### Bolha - Com para os dois primeiros, se e maior troca e incrementa mais um, fica repetindo
 ```
+00  01  02  03  04  05  06  07  08
+----------------------------------
 30  10  20  80  10  20  40  10  90
-10  20  30  10  20  40  10  80  90 teve troca? segue ordenando
+10  20  30  10  20  40  10  80  90
 10  20  10  20  30  10  40  80  90
 10  10  20  20  10  30  40  80  90
 10  10  20  10  20  30  40  80  90
 10  10  10  20  20  30  40  80  90
-10  10  10  20  20  30  40  80  90
 ```
 
-### Pente
+### Pente - Pegao tamanho da lista e divida por 1.3 e vai diminuindo ate virar bolha
 ```
-0   1   2   3   4   5   6   7   8
-30  90  10  20  80  10  20  40  10 DIST = 6
-0   40  10  20  80  10  30  90  10  Tcomp = 3 Ttrocas = 2 DIST = 4
-20  10  10  20  10  40  30  90  80  Tcomp = 7 Ttrocas = 4 DIST = 3 
-20  10  10  20  10  40  30  90  80  Tcomp = 8 Ttrocas = 5 DIST = 2
-10  10  10  20  20  40  30  90  80  Tcomp =  Ttrocas =  DIST = 2
-10  10  10  20  20  40  30  90  80  Tcomp =  Ttrocas =  DIST = 1 -> vira bolha
-10  10  10  20  20  30  40  80  90  teve comparação ? sim, então segue -> DIST = 0 então dist = 1
-10  10  10  20  20  30  40  80  90  
+00  01  02  03  04  05  06  07  08
+----------------------------------
+30  10  20  80  10  20  40  10  90  DIST = 6 | (30, 40) → ok | (10, 10) → ok | (20, 90) → ok
+30  10  20  80  10  20  40  10  90  DIST = 4 | (30, 10) → troca | (10, 20) → ok | (20, 40) → ok | (80, 10) → troca | (30, 90) → ok
+10  10  20  10  30  20  40  80  90  DIST = 3 | SEM TROCA
+10  10  20  10  30  20  40  80  90  DIST = 2 | SEM TROCA 
+10  10  20  10  30  20  40  80  90  DIST = 1 | VIRA BUBBLE SORT
+10  10  10  20  20  30  40  80  90
+
+
 ```
-### Seleção
+### Seleção - Divide a lista em duas partes: ordenada (esquerda) e não ordenada (direita).
 ```
+00  01  02  03  04  05  06  07  08  OLHA A LISTA NAO ORDENADA (DIREITA) E PROCURA O MENOR ELEMENTO PARA COLOCAR NA ESQUERDA
+----------------------------------
+30  10  20  80  10  20  40  10  90  Menor = 10(p1) → Troca com o primeiro (30)
+10| 30  20  80  10  20  40  10  90  Menor = 10(p3) → Troca com o 30
+10  10| 20  80  30  20  40  10  90  Menor = 10(p7) → Troca com o 20
+10  10  10| 80  30  20  40  20  90  Menor = 20(p5) → Troca com o 80
+10  10  10  20| 30  80  40  20  90  Menor = 20(p7) → Troca com o 30
+10  10  10  20  20| 80  40  30  90  Menor = 30(p7) → Troca com o 80
+10  10  10  20  20  30| 40  80  90  Menor = 40(p6) → Já esta no lugar
+10  10  10  20  20  30  40| 80  90  Menor = 80(p7) → Já esta no lugar
 
 ```
 * Bolha → 56 comparações, 20 trocas
