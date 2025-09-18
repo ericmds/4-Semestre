@@ -78,74 +78,26 @@ def esta_ordenado(lista):
 * Seleção → 36 comparações, 6 trocas
 
 ## 7) Na sua linguagem de preferência, implemente (sem consulta) seu método escolhido para saber.
-### Bolha
-```py
-def pente(lista):
-    houve_troca = True
-    qtd_comparacoes = 0
-    qtd_trocas = 0
-    distancia = len(lista)
+### Bolha (Java)
+```java
+public static void bubbleSort(int[] v) {
+    for (int i = v.length - 1; i > 0; i--) {
+        int changes = 0;
 
-    while True:
-        distancia = int(distancia / 1.3)
-        if distancia < 1:
-            distancia = 1
-        houve_troca = False
-        for i in range(0, len(lista) - distancia):
-            qtd_comparacoes += 1
-            if lista[i] > lista[i+distancia]:
-                qtd_trocas += 1
-                houve_troca = True
-                lista[i], lista[i+distancia] = lista[i+distancia], lista[i]
-        if distancia == 1 and not houve_troca:
-            break
+        for (int j = 0; j < i; j++) {
+            if (v[j] > v[j + 1]) {
+                int temp = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = temp;
+                changes++;
+            }
+        }
 
-    return qtd_comparacoes, qtd_trocas
-```
-### Pente
-```py
-def pente(lista):
-        houve_troca = True
-        qtd_comparacoes = 0
-        qtd_trocas = 0
-        distancia = len(lista)
-
-        while(True):
-            distancia = int(distancia / 1.3)
-            houve_troca = False
-            if distancia < 1 :
-                distancia = 1
-            for i in range(0,len(lista) - distancia):
-                qtd_comparacoes += 1
-                if(lista[i] > lista[i+distancia]):
-                    qtd_trocas+=1
-                    houve_troca = True
-                    tmp = lista[i]
-                    lista[i] = lista[i+distancia]
-                    lista[i+distancia] = tmp
-            if distanci == 1 and not houve_troca:
-              break
-                           
-            return qtd_comparacoes, qtd_trocas
-```
-### Seleção
-```py
-def selecao(lista):
-        qtd_comparacoes = 0
-        qtd_trocas = 0
-        for i in range(len(lista) - 1):
-            posMenor = i
-            for j in range(i+1, len(lista)):
-                qtd_comparacoes+=1
-                if (lista[j] < lista[posMenor]):
-                    posMenor = j
-            if (i != posMenor):
-                qtd_trocas+=1
-                tmp = lista[i]
-                lista[i] = lista[posMenor]
-                lista[posMenor] = tmp
-                
-        return qtd_comparacoes, qtd_trocas
+        if (changes == 0) {
+            break;
+        }
+    }
+}
 ```
 
 ## Como ordenar pela segunda ou terceira chave
