@@ -27,3 +27,11 @@ INSERT INTO pessoa(nome, sexo, idioma)
   ("Frazzon", "M", "Francês"),
   ("João", "M", "Alemão"),
   ("Bernardo", "M", "Holandês");
+
+CREATE TABLE veiculo(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    modelo varchar(30),
+    placa varchar(7),
+    id_pessoa int not null,
+    foreign key(id_pessoa) references pessoa(id)
+    );
