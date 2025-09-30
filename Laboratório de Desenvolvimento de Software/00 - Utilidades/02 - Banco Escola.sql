@@ -44,6 +44,14 @@ CREATE TABLE matriculas (
 
 DESC matriculas;
 
+CREATE TABLE disciplina (
+  id int AUTO_INCREMENT PRIMARY KEY,
+  nome varchar(100) NOT NULL,
+  carga_horaria INT NOT NULL,
+  id_professor INT,
+  FOREIGN KEY (id_professor) REFERENCES professores(id)
+  );
+
 INSERT INTO matriculas (id_aluno, id_professor, data_matricula)
   VALUES
   (1, 1, "2023-01-15"),
