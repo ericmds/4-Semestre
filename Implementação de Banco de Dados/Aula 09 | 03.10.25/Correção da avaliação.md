@@ -1,4 +1,4 @@
-### 7. Liste o nome dos alunos e suas respectivas notas na disciplina "Banco de Dados"
+## 7. Liste o nome dos alunos e suas respectivas notas na disciplina "Banco de Dados"
 #### Primeira forma
 ```sql
 SELECT 
@@ -14,7 +14,7 @@ INNER JOIN DISCIPLINA AS D
 	ON T.Numero_disciplina = D.Numero_disciplina
 WHERE D.Nome_disciplina = 'Banco de Dados'
 ```
-#### Segunda forma
+### Segunda forma
 ```sql
 SELECT 
 	A.Nome AS 'Aluno', 
@@ -32,7 +32,7 @@ WHERE
 	AND D.Nome_disciplina LIKE '%Banco de Dados%'
 ```
 
-### 8. Quais são as disciplinas que têm pré-requisitos e quais são seus respectivos pré-requisitos?
+## 8. Quais são as disciplinas que têm pré-requisitos e quais são seus respectivos pré-requisitos?
 ```sql
 SELECT
 	D.Numero_disciplina,
@@ -46,7 +46,7 @@ INNER JOIN DISCIPLINA AS DPR
 	ON P.Numero_pre_requisito = DPR.Numero_disciplina
 ```
 
-### 9. Liste todas as disciplinas cursadas pelo aluno Silva, mostrando o nome da disciplina, o semestre, o ao e a nota final
+## 9. Liste todas as disciplinas cursadas pelo aluno Silva, mostrando o nome da disciplina, o semestre, o ao e a nota final
 ```sql
 SELECT 
 	A.Nome, 
@@ -64,7 +64,7 @@ INNER JOIN ALUNO AS A
 WHERE A.Nome LIKE 'Silva'
 ```
 
-### 10. Crie uma função (receba o nome do aluno em questão, e a respectiva disciplina) que verifique se o aluno foi "Aprovado", está "Em recuperação", ou "Reprovado" com base na nota final. Considere:
+## 10. Crie uma função (receba o nome do aluno em questão, e a respectiva disciplina) que verifique se o aluno foi "Aprovado", está "Em recuperação", ou "Reprovado" com base na nota final. Considere:
 * Nota 'A' e 'B': Aprovado
 * Nota 'C': Em recupreção
 * Nota 'F': Reprovado
@@ -106,7 +106,7 @@ GO
 SELECT dbo.fn_StatusAprovacaoAluno('Silva', 'Matemática discreta') AS 'Status';
 ```
 
-### 11. Crie uma função que converte as notas 'A', 'B', 'C', 'F' para os valores 10, 9, 8 e 0, respectivamente, depois liste o nome de todos alunos, as disciplinas que le crsou e suas notas no formato númerico
+## 11. Crie uma função que converte as notas 'A', 'B', 'C', 'F' para os valores 10, 9, 8 e 0, respectivamente, depois liste o nome de todos alunos, as disciplinas que le crsou e suas notas no formato númerico
 ```sql
 GO
 CREATE OR ALTER FUNCTION fn_NotaParaNumero(@nota CHAR(1))
@@ -137,7 +137,7 @@ INNER JOIN HISTORICO_ESCOLAR AS H ON H.Identificacao_turma = T.Identificacao_tur
 INNER JOIN ALUNO AS A ON A.Numero_aluno = H.Numero_aluno
 ```
 
-### 12. Crie uma função para verificar se uma turma está "Completamente Lotada", "Quase Cheia", ou "Com Vagas". Depois faça uma consulta que mostre a identificação da turma, nome da disciplina, número de alunos e o status de lotação, contendo todas as turmas. Paa determinação do status de lotação utilize a seguinte regra:
+## 12. Crie uma função para verificar se uma turma está "Completamente Lotada", "Quase Cheia", ou "Com Vagas". Depois faça uma consulta que mostre a identificação da turma, nome da disciplina, número de alunos e o status de lotação, contendo todas as turmas. Paa determinação do status de lotação utilize a seguinte regra:
 * 5 ou mais alunos: Completamente Cheia
 * 3 a 4 alunos: Quase Cheia
 * Menos de 3 alunos: Com vagas
@@ -170,7 +170,7 @@ SELECT DISTINCT
 FROM HISTORICO_ESCOLAR AS H;
 ```
 
-### 13. Crie um procedimento armazenado chamado usp_CalcularIdadeAluno que receba o número ddo aluno como parâmetro e exiba a idade correta do aluno
+## 13. Crie um procedimento armazenado chamado usp_CalcularIdadeAluno que receba o número ddo aluno como parâmetro e exiba a idade correta do aluno
 ```sql
 GO
 CREATE OR ALTER PROCEDURE usp_CalcularIdadeAluno
@@ -196,7 +196,7 @@ GO
 EXEC dbo.usp_CalcularIdadeAluno 11;
 ```
 
-### 14. Crie uma procedure chamada usp_AtualizarNota que receba o número do aluno, a identificação da turma e a nova nota como parâmetros e atualize a nota do aluno no histórico escolar, e exiba uma mensagem de sucesso ou falha.
+## 14. Crie uma procedure chamada usp_AtualizarNota que receba o número do aluno, a identificação da turma e a nova nota como parâmetros e atualize a nota do aluno no histórico escolar, e exiba uma mensagem de sucesso ou falha.
 ```sql
 GO
 CREATE PROCEDURE usp_AtualizarNota
