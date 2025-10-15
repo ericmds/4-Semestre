@@ -413,38 +413,6 @@ ericfrazzon@LAB24DT02:~$ sudo systemctl restart squid
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ^C
 ericfrazzon@LAB24DT02:~$ sudo systemctl restart squid
 ericfrazzon@LAB24DT02:~$ pwd
@@ -916,8 +884,176 @@ out 15 11:19:56 LAB24DT02 squid[5987]: Accepting HTTP Socket connections at conn
 out 15 11:19:56 LAB24DT02 systemd[1]: Started Squid Web Proxy Server.
 out 15 11:19:57 LAB24DT02 squid[5987]: storeLateRelease: released 0 objects
 ericfrazzon@LAB24DT02:/etc/squid$ 
+```
+# TERMINAL 2
+```
+laboratorio@LAB24DT02:~$ ifconfig
+enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.104.16.22  netmask 255.255.255.192  broadcast 10.104.16.63
+        ether d0:94:66:e8:12:c4  txqueuelen 1000  (Ethernet)
+        RX packets 8409  bytes 4228654 (4.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5329  bytes 1875505 (1.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  memory 0x70500000-70520000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Loopback Local)
+        RX packets 3722  bytes 348743 (348.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3722  bytes 348743 (348.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+laboratorio@LAB24DT02:~$ ip add
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether d0:94:66:e8:12:c4 brd ff:ff:ff:ff:ff:ff
+    inet 10.104.16.22/26 brd 10.104.16.63 scope global dynamic noprefixroute enp0s31f6
+       valid_lft 604755sec preferred_lft 604755sec
+laboratorio@LAB24DT02:~$ ip addr add 200.10.0.17/29 dev enp0s31f6
+RTNETLINK answers: Operation not permitted
+laboratorio@LAB24DT02:~$ sudo ip addr add 200.10.0.17/29 dev enp0s31f6
+[sudo] senha para laboratorio: 
+laboratorio@LAB24DT02:~$ ip add
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether d0:94:66:e8:12:c4 brd ff:ff:ff:ff:ff:ff
+    inet 10.104.16.22/26 brd 10.104.16.63 scope global dynamic noprefixroute enp0s31f6
+       valid_lft 604684sec preferred_lft 604684sec
+    inet 200.10.0.17/29 scope global enp0s31f6
+       valid_lft forever preferred_lft forever
+laboratorio@LAB24DT02:~$ ls -la
+total 92
+drwxr-x--- 17 laboratorio laboratorio 4096 out 15 10:22  .
+drwxr-xr-x  7 root        root        4096 out 15 10:33  ..
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024 'Área de Trabalho'
+-rw-------  1 laboratorio laboratorio 7101 out 15 10:10  .bash_history
+-rw-r--r--  1 laboratorio laboratorio  220 out 11  2024  .bash_logout
+-rw-r--r--  1 laboratorio laboratorio 3771 out 11  2024  .bashrc
+drwx------ 12 laboratorio laboratorio 4096 out 24  2024  .cache
+drwx------ 15 laboratorio laboratorio 4096 out  8 09:59  .config
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Documentos
+drwxr-xr-x  3 laboratorio laboratorio 4096 out 15 10:24  Downloads
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 24  2024  .fontconfig
+drwx------  2 laboratorio laboratorio 4096 out 15 10:11  .gnupg
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Imagens
+-rw-------  1 laboratorio laboratorio   20 out 15 10:22  .lesshst
+drwx------  3 laboratorio laboratorio 4096 out 11  2024  .local
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Modelos
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Música
+-rw-r--r--  1 laboratorio laboratorio  807 out 11  2024  .profile
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Público
+drwx------  4 laboratorio laboratorio 4096 out 17  2024  snap
+drwx------  2 laboratorio laboratorio 4096 out 15 10:36  .ssh
+-rw-r--r--  1 laboratorio laboratorio    0 out 11  2024  .sudo_as_admin_successful
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Vídeos
+laboratorio@LAB24DT02:~$ ls -la /etc/squid/errors/Personalizado/
+total 16
+drwxr-xr-x 2 root root 4096 out  2 15:23 .
+drwxr-xr-x 3 root root 4096 out  2 15:02 ..
+-rw-r--r-- 1 root root  254 out  2 15:23 ERR_ACCESS_DENIED
+-rw-r--r-- 1 root root  265 out  2 15:03 ERR_BLOCKED_SITE
+lrwxrwxrwx 1 root root    2 out  2 15:17 Portuguese -> pt
+laboratorio@LAB24DT02:~$ pwd
+/home/laboratorio
+laboratorio@LAB24DT02:~$ ls -la
+total 92
+drwxr-x--- 17 laboratorio laboratorio 4096 out 15 10:22  .
+drwxr-xr-x  7 root        root        4096 out 15 10:33  ..
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024 'Área de Trabalho'
+-rw-------  1 laboratorio laboratorio 7101 out 15 10:10  .bash_history
+-rw-r--r--  1 laboratorio laboratorio  220 out 11  2024  .bash_logout
+-rw-r--r--  1 laboratorio laboratorio 3771 out 11  2024  .bashrc
+drwx------ 12 laboratorio laboratorio 4096 out 24  2024  .cache
+drwx------ 15 laboratorio laboratorio 4096 out  8 09:59  .config
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Documentos
+drwxr-xr-x  3 laboratorio laboratorio 4096 out 15 10:24  Downloads
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 24  2024  .fontconfig
+drwx------  2 laboratorio laboratorio 4096 out 15 10:11  .gnupg
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Imagens
+-rw-------  1 laboratorio laboratorio   20 out 15 10:22  .lesshst
+drwx------  3 laboratorio laboratorio 4096 out 11  2024  .local
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Modelos
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Música
+-rw-r--r--  1 laboratorio laboratorio  807 out 11  2024  .profile
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Público
+drwx------  4 laboratorio laboratorio 4096 out 17  2024  snap
+drwx------  2 laboratorio laboratorio 4096 out 15 10:36  .ssh
+-rw-r--r--  1 laboratorio laboratorio    0 out 11  2024  .sudo_as_admin_successful
+drwxr-xr-x  2 laboratorio laboratorio 4096 out 11  2024  Vídeos
+laboratorio@LAB24DT02:~$ ls -la /var/www/html/
+total 16
+drwxr-xr-x 2 root root 4096 out 15 10:18 .
+drwxr-xr-x 3 root root 4096 out 18  2024 ..
+-rw-r--r-- 1 root root  242 out  8 10:16 blockbet.html
+-rw-r--r-- 1 root root  393 out 15 10:18 index.html
+laboratorio@LAB24DT02:~$ cat /var/www/html/index.html 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Site Bloqueado</title>
+<style>
+body { font-family: Arial; text-align: center; margin-top: 10%; background-color: #f4f4f4; }
+h1 { color: red; }
+</style>
+</head>
+<body>
+  <h1>🚫 ACESSO BLOQUEADO 🚫</h1>
+  <h2>Grupo: BLAZER TELECUM</h2>
+  <p>O site solicitado foi bloqueado pelo proxy do grupo.</p>
+</body>
+</html>
+EOF
+laboratorio@LAB24DT02:~$ ifconfig
+enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.104.16.22  netmask 255.255.255.192  broadcast 10.104.16.63
+        ether d0:94:66:e8:12:c4  txqueuelen 1000  (Ethernet)
+        RX packets 9252  bytes 4460187 (4.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5812  bytes 2079343 (2.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  memory 0x70500000-70520000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Loopback Local)
+        RX packets 5328  bytes 491421 (491.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5328  bytes 491421 (491.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+laboratorio@LAB24DT02:~$ ip add
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether d0:94:66:e8:12:c4 brd ff:ff:ff:ff:ff:ff
+    inet 10.104.16.22/26 brd 10.104.16.63 scope global dynamic noprefixroute enp0s31f6
+       valid_lft 604175sec preferred_lft 604175sec
+    inet 200.10.0.17/29 scope global enp0s31f6
+       valid_lft forever preferred_lft forever
+laboratorio@LAB24DT02:~$ 
+
 
 ```
+
 # CONFIGURAÇÃO DO SUDO VI bloqueado.txt
 ```
 .bet365.bet.br
