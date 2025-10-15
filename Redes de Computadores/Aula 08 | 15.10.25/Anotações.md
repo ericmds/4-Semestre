@@ -4,6 +4,7 @@
   * Porta: 3128
 
 # No Linux - Blaze Telecom
+```
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,3 +22,4 @@ h1 { color: red; }
 </body>
 </html>
 EOF
+```
