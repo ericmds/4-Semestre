@@ -675,7 +675,7 @@ ericfrazzon@LAB24DT02:/etc/squid$ ls -la conf.d/
 total 12
 drwxr-xr-x 2 root root 4096 out 15 08:31 .
 drwxr-xr-x 4 root root 4096 out 15 10:53 ..
--rw-r--r-- 1 root root  230 jul  9  2024 debian.conf
+-rw-r--estou salvando alunos comando em um bloco de codigo em mk no github qual nome de linguagem eu coloco para ele identificar e colorir as letrar no bloco decodigo, exemplo .java, .pyr-- 1 root root  230 jul  9  2024 debian.conf
 ericfrazzon@LAB24DT02:/etc/squid$ ls -la errors
 total 12
 drwxr-xr-x 3 root root 4096 out  2 15:02 .
@@ -918,7 +918,7 @@ out 15 11:19:57 LAB24DT02 squid[5987]: storeLateRelease: released 0 objects
 ericfrazzon@LAB24DT02:/etc/squid$ 
 
 ```
-# CONFIGURAÇÃO DO SUDO VI BLOQUADO.TXT
+# CONFIGURAÇÃO DO SUDO VI bloqueado.txt
 ```
 .bet365.bet.br
 .lasmi.ufn.edu.br
@@ -926,6 +926,7 @@ ericfrazzon@LAB24DT02:/etc/squid$
 ```
 
 # CONFIGURAÇÃO DO CAT SQUID.CONF
+```
 # Porta do proxy
 http_port 3128
 visible_hostname Proxy.SQUID
@@ -938,4 +939,4 @@ acl site_bloqueado url_regex -i "/etc/squid/bloqueado.txt"
 # Regras de acesso
 http_access deny site_bloqueado
 deny_info http://200.10.0.17 site_bloqueado
-
+```
