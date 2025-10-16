@@ -1,8 +1,9 @@
 # ATIVIDADE
-1) Refatorar o código paraque ele não aceite números replicados
-2) Refatorar o código para que possa busca um número, informando sua posição na tabela
-3) Refatorar o código para buscar e remover um número
+### 1) Refatorar o código paraque ele não aceite números replicados
+### 2) Refatorar o código para que possa busca um número, informando sua posição na tabela
+### 3) Refatorar o código para buscar e remover um número
 
+## Código Base
 ```java
 package Hash;
 
