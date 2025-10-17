@@ -86,4 +86,4 @@ ELSE
 ```
 
 ## Atividade
-* Fazer o Exemplo de LOG dos Slides
+#### Crie um trigger que seja disparado depois que uma operação de inserção ocorra na tabela FUNCIONARIO. Esse trigger deve registrar o CPF do novo funcionário inserido e a operação realizada (neste caso, "INSERT") em uma tabela de log (Log_Funcionario), juntamente com a data e hora da inserção. Esse trigger ajudará a manter um histórico das inserções realizadas na tabela de funcionários.
