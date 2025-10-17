@@ -86,4 +86,74 @@ ELSE
 ```
 
 ## Atividade
-#### Crie um trigger que seja disparado depois que uma operação de inserção ocorra na tabela FUNCIONARIO. Esse trigger deve registrar o CPF do novo funcionário inserido e a operação realizada (neste caso, "INSERT") em uma tabela de log (Log_Funcionario), juntamente com a data e hora da inserção. Esse trigger ajudará a manter um histórico das inserções realizadas na tabela de funcionários.
+#### Crie um trigger que seja disparado depois que uma operação de inserção ocorra na tabela FUNCIONARIO. Esse trigger deve registrar o CPF do novo funcionário inserido e a operação realizada (neste caso, "INSERT") em uma tabela de log (Log_Funcionario), juntamente com a data e hora da inserção. Esse trigger ajudará a manter um histórico das inserções realizadas na tabela de funcionários
+```sql
+CREATE TABLE Log_Funcionario(
+	id INT IDENTITY(1,1) PRIMARY KEY, -- IDENTITY(1,1) Consegue colocar o valor inicial e qunato ele incrementa - Começa em 1, e varia de 1 em 1
+	cpf CHAR(11),
+	operacao VARCHAR(10),
+	data_Hora DATETIME DEFAULT GETDATE(),
+	acao VARCHAR(100),
+	campoAlterado VARCHAR(255)
+);
+
+-- Criar o trigger para INSERT
+GO
+CREATE OR ALTER TRIGGER tgr_LogInsertFuncionario
+ON FUNCIONARIO
+AFTER INSERT
+AS
+BEGIN
+	INSERT INTO Log_Funcionario(cpf, operacao)
+	SELECT cpf, 'INSERT'
+	FROM inserted;
+END;
+GO
+
+INSERT INTO FUNCIONARIO (CPF, Pnome, Minicial, Unome) 
+VALUES ('00123456779', 'Ze', 'D', 'Bar');
+
+SELECT * FROM Log_Funcionario;
+
+-- CRIAR LOG PARA UPDATE
+GO
+CREATE OR ALTER TRIGGER tgr_LogUpdateFuncionario
+ON FUNCIONARIO
+AFTER UPDATE
+AS
+BEGIN
+
+	DECLARE	@antigo VARCHAR(255);
+	SELECT @antigo = Pnome + ' ' + Unome + ' ' + Minicial
+	FROM deleted;
+
+	INSERT INTO Log_Funcionario(cpf, operacao, campoAlterado)
+	SELECT i.Cpf, 'UPDATE', @antigo
+	FROM inserted AS i;
+
+END;
+GO
+
+UPDATE FUNCIONARIO
+SET Unome = 'da Roça'
+WHERE Cpf = '00123456779';
+
+SELECT * FROM Log_Funcionario;
+
+-- Criar Log para Delete
+GO
+CREATE OR ALTER TRIGGER tgr_LogDeleteFuncionario
+ON FUNCIONARIO
+AFTER DELETE
+AS
+BEGIN
+	INSERT INTO Log_Funcionario(cpf, operacao)
+	SELECT cpf, 'UPDATE'
+	FROM deleted;
+END;
+GO
+
+DELETE FROM FUNCIONARIO WHERE Cpf = '00123456779';
+
+select * from FUNCIONARIO
+```
