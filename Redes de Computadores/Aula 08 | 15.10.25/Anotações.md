@@ -147,43 +147,10 @@ out 15 10:21:26 LAB24DT02 squid[4219]: Maximum Resident Size: 58880 KB
 out 15 10:21:26 LAB24DT02 squid[4219]: Page faults with physical i/o: 0
 out 15 10:21:26 LAB24DT02 systemd[1]: Failed to start Squid Web Proxy Server.
 ~
-~
-~
-~
-~
-~
  ESCOC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /squid.service; enabled; vendor preset: enabled)
 since Wed 2025-10-15 10:21:26 -03; 32s ago
-
 /squid --foreground -z (code=exited, status=1/FAILURE)
-
-
 arting Squid Web Proxy Server...
 uid.service: Control process exited, code=exited, status=1/FAILURE
 025/10/15 10:21:26| ACL not found: localnet
@@ -194,13 +161,6 @@ PU Usage: 0.006 seconds = 0.003 user + 0.002 sys
 aximum Resident Size: 58880 KB
 age faults with physical i/o: 0
 iled to start Squid Web Proxy Server.
-~
-~
-~
-~
-~
-~
-
 laboratorio@LAB24DT02:~$ systemctl status squid.service
 × squid.service - Squid Web Proxy Server
      Loaded: loaded (/lib/systemd/system/squid.service; enabled; vendor preset:>
@@ -208,7 +168,6 @@ laboratorio@LAB24DT02:~$ systemctl status squid.service
        Docs: man:squid(8)
     Process: 4219 ExecStartPre=/usr/sbin/squid --foreground -z (code=exited, st>
         CPU: 5ms
-
 out 15 10:21:26 LAB24DT02 systemd[1]: Starting Squid Web Proxy Server...
 out 15 10:21:26 LAB24DT02 systemd[1]: squid.service: Control process exited, co>
 out 15 10:21:26 LAB24DT02 squid[4219]: 2025/10/15 10:21:26| ACL not found: loca>
@@ -226,7 +185,6 @@ out 15 10:21:26 LAB24DT02 systemd[1]: Failed to start Squid Web Proxy Server.
        Docs: man:squid(8)
     Process: 4219 ExecStartPre=/usr/sbin/squid --foreground -z (code=exited, st>
         CPU: 5ms
-
 out 15 10:21:26 LAB24DT02 systemd[1]: Starting Squid Web Proxy Server...
 out 15 10:21:26 LAB24DT02 systemd[1]: squid.service: Control process exited, co>
 out 15 10:21:26 LAB24DT02 squid[4219]: 2025/10/15 10:21:26| ACL not found: loca>
@@ -237,12 +195,6 @@ out 15 10:21:26 LAB24DT02 squid[4219]: CPU Usage: 0.006 seconds = 0.003 user + >
 out 15 10:21:26 LAB24DT02 squid[4219]: Maximum Resident Size: 58880 KB
 out 15 10:21:26 LAB24DT02 squid[4219]: Page faults with physical i/o: 0
 out 15 10:21:26 LAB24DT02 systemd[1]: Failed to start Squid Web Proxy Server.
-~
-~
-~
-~
-~
-~
 laboratorio@LAB24DT02:~$ sudo systemctl restart squid
 Job for squid.service failed because the control process exited with error code.
 See "systemctl status squid.service" and "journalctl -xeu squid.service" for details.
@@ -336,25 +288,18 @@ Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-45-generic x86_64)
  * Support:        https://ubuntu.com/pro
 
 Manutenção de Segurança Expandida para Applications não está ativa.
-
 91 as atualizações podem ser aplicadas imediatamente.
 8 dessas atualizações são atualizações de segurança padrão.
 Para ver as actualizações adicionais corre o comando: apt list --upgradable
-
 Ativar ESM Apps para poder receber possiveis futuras atualizações de segurança.
 Consulte https://ubuntu.com/esm ou execute: sudo pro status
-
-
 The programs included with the Ubuntu system are free software;
 the exact distribution terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.
-
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
-
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
-
 ericfrazzon@LAB24DT02:~$ sudo systemctl status apache2
 [sudo] senha para ericfrazzon: 
 ● apache2.service - The Apache HTTP Server
@@ -369,7 +314,6 @@ ericfrazzon@LAB24DT02:~$ sudo systemctl status apache2
              ├─4062 /usr/sbin/apache2 -k start
              ├─4063 /usr/sbin/apache2 -k start
              └─4064 /usr/sbin/apache2 -k start
-
 out 15 10:19:11 LAB24DT02 systemd[1]: Starting The Apache HTTP Server...
 out 15 10:19:11 LAB24DT02 apachectl[4061]: AH00558: apache2: Could not reliably determ>
 out 15 10:19:11 LAB24DT02 systemd[1]: Started The Apache HTTP Server.
@@ -386,7 +330,6 @@ ericfrazzon@LAB24DT02:~$ sudo systemctl status squid.service
              ├─4322 /usr/sbin/squid --foreground -sYC
              ├─4324 "(squid-1)" --kid squid-1 --foreground -sYC
              └─4325 "(pinger)"
-
 out 15 10:27:54 LAB24DT02 squid[4324]: Using Least Load store dir selection
 out 15 10:27:54 LAB24DT02 squid[4324]: Current Directory is /
 out 15 10:27:54 LAB24DT02 squid[4324]: Finished loading MIME types and icons.
@@ -406,14 +349,6 @@ ericfrazzon@LAB24DT02:~$ sudo nano /etc/squid/squid.conf
 ericfrazzon@LAB24DT02:~$ sudo sustemctl restart squid
 sudo: sustemctl: comando não encontrado
 ericfrazzon@LAB24DT02:~$ sudo systemctl restart squid
-
-
-
-
-
-
-
-^C
 ericfrazzon@LAB24DT02:~$ sudo systemctl restart squid
 ericfrazzon@LAB24DT02:~$ pwd
 /home/ericfrazzon
@@ -734,33 +669,6 @@ out 15 11:10:44 LAB24DT02 squid[5057]: Removing PID file (/run/squid.pid)
 out 15 11:10:44 LAB24DT02 systemd[1]: squid.service: Deactivated successfully.
 out 15 11:10:44 LAB24DT02 systemd[1]: Stopped Squid Web Proxy Server.
 ~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
 ericfrazzon@LAB24DT02:/etc/squid$ sudo service squid start
 Job for squid.service failed because the control process exited with error code.
 See "systemctl status squid.service" and "journalctl -xeu squid.service" for details.
@@ -776,7 +684,6 @@ ericfrazzon@LAB24DT02:/etc/squid$ cat squid.conf
 http_port 3128
 visible_hostname Proxy.SQUID
 
-
 # Bloquear site de apostas
 acl site_bloqueado url_regex -i "/etc/squid/bloqueado.txt"
 
@@ -784,7 +691,6 @@ acl site_bloqueado url_regex -i "/etc/squid/bloqueado.txt"
 # Regras de acesso
 http_access deny site_bloqueado
 deny_info http://200.10.0.17 site_bloqueado
-
 
 ericfrazzon@LAB24DT02:/etc/squid$ sudo vi bloqueado.txt
 ericfrazzon@LAB24DT02:/etc/squid$ sudo service squid stop
@@ -828,33 +734,6 @@ out 15 11:19:45 LAB24DT02 squid[5883]: Squid Parent: squid-1 process 5885 exited
 out 15 11:19:45 LAB24DT02 squid[5883]: Removing PID file (/run/squid.pid)
 out 15 11:19:45 LAB24DT02 systemd[1]: squid.service: Deactivated successfully.
 out 15 11:19:45 LAB24DT02 systemd[1]: Stopped Squid Web Proxy Server.
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
 ~
 ericfrazzon@LAB24DT02:/etc/squid$ sudo service squid start
 ericfrazzon@LAB24DT02:/etc/squid$ sudo service squid status
