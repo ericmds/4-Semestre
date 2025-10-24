@@ -30,3 +30,31 @@ SELECT colunas
 FROM tabela
 WHERE condicao
 ```
+
+## Exercício
+```sql
+-- Utilizando o Banco BIBLIOTECA, crie uma viw para retornar todas as informações conforme a tabela do PDF
+GO
+CREATE OR ALTER VIEW vw_Relatoriolivros
+AS
+SELECT 
+	L.isbn AS 'ISBN',
+	L.titulo AS 'TÍtulo',
+	L.ano AS 'Ano',
+	E.nome AS 'Editora',
+	A.nome + ' (' + A.nacionalidade + ')' AS 'Autor/Nacionalidade',
+ -- CONCAT (A.nome, ' (', A.nacionalidade, ') ') AS 'Autor/Nacionalidade' -- OUTRA FORMA DE MOSTRAR O Autor e Nacionalidade
+	C.tipo_categoria AS Categoria
+FROM Livro AS L
+INNER JOIN LivroAutor AS LA 
+	ON L.isbn = LA.fk_livro
+INNER JOIN Autor AS A 
+	ON A.id = LA.fk_autor
+INNER JOIN Editora AS E 
+	ON E.id = L.fk_editora
+INNER JOIN Categoria AS C 
+	ON C.id = L.fk_categoria
+GO
+
+SELECT DISTINCT Editora FROM vw_Relatoriolivros
+```
